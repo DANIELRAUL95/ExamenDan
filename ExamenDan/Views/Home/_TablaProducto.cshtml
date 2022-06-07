@@ -1,0 +1,76 @@
+﻿@using ExamenDan.DTOS
+@model List<ProductoDTO>
+
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>
+               ID Producto
+            </th>
+            <th>
+                Nombre sucursal
+            </th>
+            <th>
+                Nombre del producto
+            </th>
+            <th>
+                Codigo de barra
+            </th>
+            <th>
+                Cantidad
+            </th>
+            <th>
+                Precio Unitario
+            </th>
+
+            <th>
+                Acciones
+            </th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var dr in Model)
+        {
+        <tr>
+            <td>
+               @dr.ProductoId
+            </td>
+            <td>
+                @dr.NombreSucursal
+            </td>
+            <td>
+                @dr.NombreProducto
+            </td>
+            <td>
+                @dr.CodigoBarra
+            </td>
+            <td>
+                @dr.Existencia
+            </td>
+            <td>
+                @dr.Precio_Unitario
+            </td>
+
+            <td >
+                <button class="btn btn-info" onclick="editaProducto(@dr.ProductoId, @dr.SucursalId, @dr.Existencia)">EDITAR EXISTENCIA</button>
+            </td>
+
+        </tr>
+
+
+        }
+
+
+    </tbody>
+
+
+</table>
+
+
+

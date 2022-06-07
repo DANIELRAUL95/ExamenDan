@@ -1,0 +1,21 @@
+﻿@using ExamenDan.DTOS
+@model List<ProductoDTO>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<input id="Busqueda" type="number" class="form-control" placeholder="ID producto" /> <button class="btn btn-dark" id="btnBusqueda" >Buscar</button>
+
+
+
+<div id="TablaProducto">
+    <partial name="_TablaProducto" model="Model"></partial>
+</div>
+
+
+@section scripts {
+    <script src="~/js/Inventario.js"></script>
+}
+
+

@@ -1,0 +1,9 @@
+﻿CREATE PROCEDURE SP_Eliminar_Registros
+(	
+    @ID  int = 0
+	
+	)
+AS
+BEGIN
+	DELETE  FROM SUCURSALES WHERE ID = @ID
+END
